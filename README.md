@@ -110,6 +110,12 @@ This repository intentionally avoids overstating results:
 - The basket BOLA finding is limited to unauthorized read access/enumeration unless later testing proves unauthorized modification, checkout, or payment impact.
 - The product-ID Intruder results are treated as product-catalog enumeration, not authorization bypass, unless restricted or hidden product data is proven.
 
+## Acknowledgements
+
+Shout-out to **Netsec Explained** on YouTube for the Burp Suite + OWASP Juice Shop walkthrough that helped guide the lab flow: [Master Burp Suite Like A Pro In Just 1 Hour](https://www.youtube.com/live/QiNLNDSLuJY).
+
+This repository is not a transcript or clone of the video; it documents my own authorized local lab execution, evidence handling, findings, and claim boundaries.
+
 ## Cleanup
 
 ```bash
