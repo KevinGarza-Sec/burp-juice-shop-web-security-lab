@@ -80,6 +80,4 @@ If only HTTP History rows are visible with loopback hostnames, no redaction is u
 
 Keep a note that Burp colors are analyst annotations, not automatic severity labels.
 
-## Interview explanation
 
-> After proving the feedback API accepted an out-of-range rating in Repeater, I continued normal application mapping and found that the About Us page requested `GET /api/Feedbacks/`. The response returned the manipulated score, which showed the invalid value persisted and was later consumed by application functionality. I also identified an `/ftp/legal.md` content path from an About Us hyperlink and marked it for later enumeration without prematurely calling it a vulnerability.
