@@ -125,7 +125,3 @@ sudo docker stop juice-shop-lab
 ```
 
 The container was launched with `--rm`, so stopping it removes the container while leaving the image cached.
-
-## Interview explanation
-
-> I deployed OWASP Juice Shop locally with Docker and restricted the vulnerable service to loopback. I mapped the application through Burp Proxy, correlated UI actions with REST and Socket.IO traffic, and used Repeater to test trust boundaries. I found that the CAPTCHA endpoint exposed both the challenge and answer, that the same values could be replayed, and that the feedback API accepted a rating far outside the UI-supported range. During Photo Wall mapping, I found that an unauthenticated Memories response serialized full nested user records, including password-hash, token, role, and email properties the public UI did not require. After logging in, I decoded the returned JWT and identified sensitive user claims, then tested a numeric basket endpoint and confirmed Broken Object Level Authorization by changing `/rest/basket/{id}` and using Intruder with Grep Extract to enumerate basket owners. I preserved evidence while redacting tokens, hashes, and identifiers, and avoided claiming password cracking, token reuse, checkout abuse, or account compromise.
