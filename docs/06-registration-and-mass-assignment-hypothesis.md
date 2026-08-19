@@ -63,7 +63,6 @@ Capture:
 18-user-object-found.png
 ```
 
-The screenshot should show enough of the `POST /api/Users/` response to identify returned field names, but values must be redacted before publication.
 
 ### 2. Test whether `role` is client-controllable
 
@@ -77,14 +76,10 @@ Create a new unique lab email and add a privileged-looking field to the JSON bod
 
 ```json
 {
-  "email": "lab-user-redacted@example.local",
-  "password": "[REDACTED]",
-  "passwordRepeat": "[REDACTED]",
   "securityQuestion": {
     "id": 1,
     "question": "Your eldest siblings middle name?"
   },
-  "securityAnswer": "[REDACTED]",
   "role": "admin"
 }
 ```
@@ -111,22 +106,3 @@ A same-response reflection is weaker than persistence. If a privileged field app
 2. Modified registration request shows the over-posted field sent by the client.
 3. Response shows server acceptance or rejection.
 4. Follow-up request/UI confirms whether the field persisted.
-
-## Redaction requirements
-
-Before publishing screenshot 18 or any mass-assignment test evidence, redact:
-
-- Registered email address
-- Password and repeated password
-- Security answer
-- Session cookies
-- Authorization headers or JWTs
-- User IDs if tied to the new lab account
-- Tokens such as `deluxeToken`
-- Any real personal name or account identifier
-
-Keep field names visible. The point is to prove the server returns or accepts specific properties, not to publish their values.
-
-## Interview explanation
-
-> During registration mapping, I captured the security-question, user-creation, and security-answer requests. The user-creation response returned a user object, which helped identify server-side model properties worth testing for mass assignment. I treated that as a hypothesis until I could over-post fields such as `role` or `deluxeToken` and verify whether the server persisted them.

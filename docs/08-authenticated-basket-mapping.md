@@ -81,26 +81,6 @@ Recommended additional screenshot:
 26-basket-idor-direct-repeater-response.png
 ```
 
-The follow-up screenshot should show the direct Repeater response for `/rest/basket/5`, including another user's basket contents, with authorization tokens and cookies redacted.
-
-## Redaction requirements
-
-Authenticated basket traffic may contain live credentials or session material. Redact:
-
-- `Authorization: Bearer ...`
-- `token=` cookies
-- JWTs
-- User email addresses
-- Session identifiers
-
-Leave visible:
-
-- Endpoint path
-- Payload marker around the basket ID
-- Status code
-- Response length
-- Extracted `UserId` column
-- Product names in the intentionally vulnerable local lab if no personal data is present
 
 ## Classification
 
@@ -111,7 +91,3 @@ F-005 — Basket IDOR / Broken Object Level Authorization
 ```
 
 A successful GET to another user's basket is a read-access authorization issue. Do not claim unauthorized modification or checkout impact unless a later test proves it.
-
-## Interview explanation
-
-> After logging in and adding an item to my basket, I noticed the application used a numeric basket ID in `/rest/basket/{id}`. I sent the request to Repeater, changed the ID, and observed that another user's basket data was returned. I then used Intruder with a small numeric range and Grep Extract to confirm that multiple basket IDs mapped to different user IDs. I documented this as Broken Object Level Authorization while limiting the claim to unauthorized read access and enumeration.

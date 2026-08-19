@@ -94,21 +94,6 @@ It is not a vulnerability yet. Future testing can evaluate:
 21-searchbar-repeater-tab.png
 ```
 
-## Redaction requirements
-
-Before publication, redact:
-
-- Full JWT values
-- Bearer tokens
-- Token cookies
-- Email addresses
-- User IDs tied to the lab account
-- Password hashes
-- MFA/TOTP-related values
-- Any other token-like value
-
-Keep endpoint names, status codes, and field names visible where possible.
-
 ## Suggested Burp tab names
 
 ```text

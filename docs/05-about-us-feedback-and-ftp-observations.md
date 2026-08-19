@@ -61,7 +61,6 @@ Before public inclusion, verify that the screenshot shows:
 - `rating` or `score` value of `500`
 - Enough surrounding context to prove this is a later application-facing response, not only the original Repeater manipulation
 
-Redact any real names, emails, cookies, authorization headers, session tokens, or personal identifiers.
 
 ## Validation checklist for screenshot 17
 
@@ -71,7 +70,6 @@ Before public inclusion, verify that the screenshot shows:
 - `/ftp/legal.md` highlighted as an informational/follow-up investigation item
 - No response body containing secrets, tokens, emails, or unrelated browsing data
 
-If only HTTP History rows are visible with loopback hostnames, no redaction is usually required.
 
 ## Suggested Burp annotations
 
@@ -79,5 +77,3 @@ If only HTTP History rows are visible with loopback hostnames, no redaction is u
 - Light blue or informational color: `/ftp/legal.md` for later content-discovery investigation.
 
 Keep a note that Burp colors are analyst annotations, not automatic severity labels.
-
-

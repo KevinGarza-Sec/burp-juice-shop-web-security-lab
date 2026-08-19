@@ -81,9 +81,3 @@ If the response contains confirmed reportable information and the lab convention
 ```text
 15-burp-application-configuration-response.png
 ```
-
-Capture the Repeater request and enough of the `200 OK` JSON response to show the endpoint and representative fields. Before publishing, redact any secrets, tokens, real emails, public IPs, external account identifiers, or private infrastructure names.
-
-## Interview explanation
-
-> During unauthenticated mapping, I identified a public application-configuration endpoint. The browser initially relied on ETag cache validation, so I sent the request to Repeater and removed the `If-None-Match` header to retrieve a full `200 OK` representation. I then reviewed the returned fields to distinguish expected frontend configuration from potentially sensitive information rather than labeling every public configuration endpoint as a vulnerability.

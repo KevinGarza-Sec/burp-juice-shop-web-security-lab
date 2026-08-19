@@ -95,19 +95,3 @@ INFO-005 Product API Enumeration Baseline
 ```
 
 The filename `25-authz-intruder-results.png` preserves the operator's working name, but the documentation keeps the claim bounded: this is an authorization-test baseline, not a confirmed authorization finding.
-
-## Redaction requirements
-
-Authenticated requests may contain session material. Redact:
-
-- `Authorization: Bearer ...`
-- `token=` cookies
-- JWTs
-- `continueCode` or session-like values
-- User email or account identifiers
-
-Product names, prices, response status codes, and loopback hostnames are safe to retain in this local portfolio lab.
-
-## Interview explanation
-
-> I used the same Repeater-to-Intruder workflow against a product-detail endpoint to enumerate product IDs and extract names, descriptions, and prices into the Intruder results table. I treated the result as an informational product-catalog baseline rather than an authorization vulnerability because public product data is expected in an e-commerce application unless hidden or restricted fields are proven.

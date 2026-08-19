@@ -95,7 +95,7 @@ Current canonical evidence:
 - Authentication-state analysis
 - Client-side versus server-side validation testing
 - CAPTCHA/anti-automation control analysis
-- Evidence handling, redaction, and defensible reporting
+- Evidence handling and defensible reporting
 
 ## Claim boundary
 
