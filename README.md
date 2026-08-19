@@ -112,9 +112,11 @@ This repository intentionally avoids overstating results:
 
 ## Acknowledgements
 
-Shout-out to **Netsec Explained** on YouTube for the Burp Suite + OWASP Juice Shop walkthrough that helped guide the lab flow: [Master Burp Suite Like A Pro In Just 1 Hour](https://www.youtube.com/live/QiNLNDSLuJY).
+This project was inspired by **Netsec Explained** on YouTube and his Burp Suite + OWASP Juice Shop walkthrough: [Master Burp Suite Like A Pro In Just 1 Hour](https://www.youtube.com/live/QiNLNDSLuJY).
 
-This repository is not a transcript or clone of the video; it documents my own authorized local lab execution, evidence handling, findings, and claim boundaries.
+I used the video as a guided learning path, then reproduced selected techniques in my own authorized local OWASP Juice Shop Docker lab. The screenshots, notes, finding writeups, remediation guidance, and claim boundaries in this repository reflect my own lab execution and documentation.
+
+The purpose of this repository is to demonstrate Burp Suite literacy, web-security methodology, evidence handling, and clear technical communication—not to present the guided lab findings as novel independent research.
 
 ## Cleanup
 
